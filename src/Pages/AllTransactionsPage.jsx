@@ -9,6 +9,8 @@ import {
   useTransactionActions,
 } from '../Context/TransactionProvider';
 import colorArray from '../utils/colorArray';
+import { Link } from 'react-router-dom';
+import MainHeader from '../Components/MainHeader';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -83,10 +85,18 @@ const AllTransactionsPage = ({ history }) => {
   };
 
   return (
-    <section className="w-full flex flex-col mt-8">
+    <section className="w-full flex flex-col">
+      <MainHeader />
       <div className="flex items-center justify-between">
         <div>
-          <h3 style={{ letterSpacing: 2, fontSize: 18 }}>Transactions</h3>
+          <Link to="/">
+            <h3
+              style={{ letterSpacing: 2, fontSize: 18 }}
+              className="hover:text-slate-400"
+            >
+              Transactions
+            </h3>
+          </Link>
         </div>
         <div>
           <Select
