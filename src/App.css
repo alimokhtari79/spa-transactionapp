@@ -16,6 +16,11 @@ button {
   border: none;
 }
 
+main {
+  width: 95%;
+  max-width: 24rem;
+}
+
 /* Main style */
 
 /* overView */
@@ -24,7 +29,6 @@ button {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 24rem;
   /* padding: 1rem; */
 }
 
@@ -179,7 +183,7 @@ input[type='radio']:checked + label {
 
 .Transactions {
   /* padding: 0 2rem; */
-  width: 20rem;
+  width: 100%;
   display: flex;
   flex-direction: column;
   margin-top: 1rem;
@@ -192,6 +196,7 @@ input[type='radio']:checked + label {
 }
 
 .transaction_header {
+  width: inherit;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -203,8 +208,7 @@ input[type='radio']:checked + label {
 /* transaction */
 
 .transaction {
-  width: 100%;
-  max-width: 20rem;
+  width: 95%;
   padding: 0 1rem 0 0;
   height: 2.5rem;
   margin: 1rem 0;
@@ -255,6 +259,11 @@ input[type='radio']:checked + label {
 
 .transactionExpenseAmount {
   color: #eb5757;
+}
+
+.transaction-link {
+  text-decoration: none;
+  color: #2563eb;
 }
 
 /* transaction */

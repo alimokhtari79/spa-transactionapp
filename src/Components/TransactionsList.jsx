@@ -7,18 +7,14 @@ import Transaction from './Transaction';
 
 const TransactionsList = () => {
   const transaction = useTransaction();
+  const slicedTransactions = transaction.slice(0, 4);
   const { deleteHandler } = useTransactionActions();
   return (
     <section className={'Transactions'}>
-      <div className={'transaction_header'}>
-        <div>
-          <h3 style={{ letterSpacing: 2, fontSize: 18 }}>Transactions</h3>
-        </div>
-      </div>
-      {transaction.length === 0 ? (
+      {slicedTransactions.length === 0 ? (
         <p className="addTransaction">Add Some Transaction</p>
       ) : (
-        transaction.map((transaction) => {
+        slicedTransactions.map((transaction) => {
           return (
             <Transaction
               key={transaction.id}
