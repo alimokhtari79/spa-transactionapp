@@ -21,33 +21,35 @@ const OverView = () => {
   }, [transactions]);
 
   return (
-    <div className="overViewContainer">
-      <div className="overViewUp">
+    <div className="flex flex-col w-full">
+      <div className="mt-8 flex justify-between items-center">
         <div>
-          <p className="balance">Balance : {income - expense}</p>
+          <p className="text-2xl text-blue-500">Balance : {income - expense}</p>
         </div>
         <div>
           <Link to="/add-transaction">
-            <button className="showForm_btn">Add</button>
+            <button className="bg-gray-800 text-white rounded-lg text-sm py-2 px-6">
+              Add
+            </button>
           </Link>
         </div>
       </div>
 
-      <div className="overViewDown">
-        <div className={`overViewDown_expenseAndIncome overViewDown_Income`}>
-          <div className="expenseAndIncome_up">
+      <div className="flex justify-between items-center my-4 w-full">
+        <div className="w-1/2 h-20 flex flex-col justify-between p-3 bg-gray-800 rounded-lg mr-8">
+          <div className="flex justify-between">
             <p>Income</p>
-            <div className={`expenseAndIncome_icon Income_icon`}>
+            <div className="flex justify-center items-center rounded-lg p-1 bg-[#6fcf972d] text-[#6fcf97]">
               <IoArrowUp />
             </div>
           </div>
           <div>{income}</div>
         </div>
 
-        <div className="overViewDown_expenseAndIncome">
-          <div className="expenseAndIncome_up">
+        <div className="w-1/2 h-20 flex flex-col justify-between p-3 bg-gray-800 rounded-lg">
+          <div className="flex justify-between">
             <p>Expense</p>
-            <div className={`expenseAndIncome_icon expense_icon`}>
+            <div className="flex justify-center items-center rounded-lg p-1 bg-[#eb57572d] text-[#eb5757]">
               <IoArrowDown />
             </div>
           </div>

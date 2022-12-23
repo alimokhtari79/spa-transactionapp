@@ -6,13 +6,13 @@ import {
 import Transaction from './Transaction';
 
 const TransactionsList = () => {
-  const transaction = useTransaction();
-  const slicedTransactions = transaction.slice(0, 4);
+  const transactions = useTransaction();
+  const slicedTransactions = transactions.slice(0, 4);
   const { deleteHandler } = useTransactionActions();
   return (
-    <section className={'Transactions'}>
+    <section className="w-full flex flex-col mt-4">
       {slicedTransactions.length === 0 ? (
-        <p className="addTransaction">Add Some Transaction</p>
+        <p className="text-base mt-4 text-center">Add Some Transaction</p>
       ) : (
         slicedTransactions.map((transaction) => {
           return (

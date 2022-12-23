@@ -1,17 +1,14 @@
-import { useEffect, useState } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import './App.css';
-import TransactionProvider, {
-  useTransaction,
-} from './Context/TransactionProvider';
+import TransactionProvider from './Context/TransactionProvider';
 import AddTransactionPage from './Pages/AddTransactionPage';
 import AllTransactionsPage from './Pages/AllTransactionsPage';
 import HomePage from './Pages/HomePage';
 
 function App() {
   return (
-    <div className="App">
-      <main>
+    <div className="min-h-screen flex items-center flex-col bg-slate-900 text-gray-50 overflow-hidden">
+      <main className="w-full max-w-sm">
         <TransactionProvider>
           <Switch>
             <Route path="/" component={HomePage} exact />

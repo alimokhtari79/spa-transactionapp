@@ -39,17 +39,17 @@ const AddTransactionPage = ({ history }) => {
 
   return (
     <form
-      className="transaction-form"
+      className="mt-8 flex flex-col justify-center items-center"
       onSubmit={(e) => {
         submitTransaction(e);
       }}
     >
-      <div className="formText">
+      <div className="px-3">
         <input
           type="text"
           name="desc"
           placeholder="Description"
-          className="formText_input"
+          className="outline-none w-full py-3 px-2 mt-4 border-none rounded-lg text-base text-gray-50 bg-gray-800"
           value={transaction.desc}
           onChange={changeHandler}
           autoComplete="off"
@@ -58,38 +58,47 @@ const AddTransactionPage = ({ history }) => {
           type="number"
           name="amount"
           placeholder="Amount"
-          className="formText_input"
+          className="outline-none w-full py-3 px-2 mt-4 border-none rounded-lg text-base text-gray-50 bg-gray-800"
           value={transaction.amount}
           onChange={changeHandler}
         />
       </div>
 
-      <div className="radioBtns">
+      <div className="flex justify-center items-center m-2 gap-4 outline-none border-none mt-6">
         <div>
           <input
             type="radio"
+            className="hidden"
             name="type"
             value="income"
             id="income"
             onChange={changeHandler}
             checked={transaction.type === 'income'}
           />
-          <label htmlFor="income">Income</label>
+          <label htmlFor="income" className="rounded-lg py-2 px-3">
+            Income
+          </label>
         </div>
         <div>
           <input
             type="radio"
+            className="hidden"
             name="type"
             value="expense"
             id="expense"
             onChange={changeHandler}
             checked={transaction.type === 'expense'}
           />
-          <label htmlFor="expense">Expense</label>
+          <label htmlFor="expense" className="rounded-lg py-2 px-3">
+            Expense
+          </label>
         </div>
       </div>
-      <div className="addTransaction_container">
-        <button type="submit" className="addTransaction_Btn">
+      <div className="flex justify-center w-80 mt-3">
+        <button
+          type="submit"
+          className="cursor-pointer mt-2 p-4 w-52 bg-blue-900 rounded-lg"
+        >
           ADD TRANSACTION
         </button>
       </div>

@@ -1,14 +1,20 @@
 /* Main style */
 
-.App {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  background-color: #121212;
-  color: #f2f2f2;
-  overflow: hidden;
-  /* padding: 1rem; */
+::-webkit-scrollbar {
+  width: 0.3rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #7775;
+  border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #777;
 }
 
 button {
@@ -16,254 +22,32 @@ button {
   border: none;
 }
 
-main {
+/* main {
   width: 95%;
   max-width: 24rem;
-}
+} */
 
 /* Main style */
 
-/* overView */
-
-.overViewContainer {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  /* padding: 1rem; */
-}
-
-.overViewUp {
-  margin-top: 2rem;
-}
-
-.balance {
-  font-size: 1.5rem;
-  color: #438ef1;
-}
-
-.showForm_btn {
-  padding: 0.4rem 1.5rem;
-  font-size: 0.9rem;
-  background-color: #1f2732;
-  color: #fff;
-  border-radius: 0.5rem;
-}
-
-.overViewUp,
-.overViewDown {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.overViewDown {
-  justify-content: space-between;
-  width: 100%;
-  margin: 1rem 0;
-}
-
-.overViewDown_Income {
-  margin-right: 2rem;
-}
-
-.overViewDown_expenseAndIncome {
-  width: 50%;
-  height: 4.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 0.7rem;
-  background-color: #1f2732;
-  border-radius: 0.5rem;
-}
-
-.expenseAndIncome_up {
-  display: flex;
-  justify-content: space-between;
-}
-
-.expenseAndIncome_icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 8px;
-  padding: 3px;
-}
-
-.expense_icon {
-  background-color: rgba(235, 87, 87, 0.178);
-  color: #eb5757;
-}
-
-.Income_icon {
-  background-color: rgba(111, 207, 151, 0.178);
-  color: #6fcf97;
-}
-
-/* overView */
-
 /* Add transaction */
-
-.transaction-form {
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.formText_input {
-  outline: none;
-  width: 100%;
-  padding: 0.7rem 0.5rem;
-  margin-bottom: 1rem;
-  border: none;
-  /* border-top-left-radius: 8px;
-	border-top-right-radius: 8px; */
-  border-radius: 0.5rem;
-  font-size: 0.9rem;
-  color: #f2f2f2;
-  background-color: #1f2732;
-}
-
-.formText_input::placeholder {
-  color: #f2f2f2;
-}
-
-.radioBtns {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0.5rem;
-  gap: 1rem;
-  outline: none;
-  border: none;
-  margin-top: 1rem;
-}
 
 input[type='number']::-webkit-inner-spin-button {
   opacity: 0;
 }
 
-input[type='radio'] {
-  display: none;
-}
-
-input[type='radio'] + label {
-  cursor: pointer;
-  border-radius: 0.5rem;
-  padding: 0.4rem 0.8rem;
-}
-
 input[type='radio']:checked + label {
   background-color: #1f2732;
-  color: #fff;
-}
-
-.addTransaction_Btn {
-  cursor: pointer;
-  margin-top: 0.5rem;
-  padding: 0.8rem;
-  width: 13rem;
-  background-color: #006af6;
-  color: #fff;
-  border-radius: 0.5rem;
-}
-
-.addTransaction_container {
-  width: 20rem;
-  margin-top: 0.7rem;
-  display: flex;
-  justify-content: center;
 }
 
 /* Add transaction */
 
-/* transaction list */
-
-.Transactions {
-  /* padding: 0 2rem; */
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  margin-top: 1rem;
-}
-
-.addTransaction {
-  font-size: 1rem;
-  margin-top: 1rem;
-  text-align: center;
-}
-
-.transaction_header {
-  width: inherit;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  /* padding: 0 0.5rem; */
-}
-
-/* transaction list */
-
 /* transaction */
-
-.transaction {
-  width: 95%;
-  padding: 0 1rem 0 0;
-  height: 2.5rem;
-  margin: 1rem 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 0.5rem;
-  background-color: #1f2732;
-}
-
-.transaction_left {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 14rem;
-  height: 100%;
-  overflow: hidden;
-}
-
-.transaction_left p {
-  margin-left: 1rem;
-}
-
-.transaction_left button {
-  cursor: pointer;
-  border: none;
-  outline: none;
-  height: 100%;
-  border-top-left-radius: 0.5rem;
-  border-bottom-left-radius: 0.5rem;
-  padding: 0 0.5rem;
-  color: #fff;
-  background-color: #d11a2a;
-  transform: translateX(-100%);
-  display: none;
-}
 
 .transaction:hover .transaction_left button {
   display: flex;
   align-items: center;
   justify-content: center;
   transform: translateX(0);
-}
-
-.transactionIncomeAmount {
-  color: #6fcf97;
-}
-
-.transactionExpenseAmount {
-  color: #eb5757;
-}
-
-.transaction-link {
-  text-decoration: none;
-  color: #2563eb;
 }
 
 /* transaction */

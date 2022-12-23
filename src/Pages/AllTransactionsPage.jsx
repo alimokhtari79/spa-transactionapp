@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+
 import Transaction from '../Components/Transaction';
 import Select from 'react-select';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
@@ -33,7 +34,7 @@ const selectStyles = {
   }),
 };
 
-const AllTransactionsPage = () => {
+const AllTransactionsPage = ({ history }) => {
   const transactions = useTransaction();
   const { deleteHandler } = useTransactionActions();
   const [FilterTransactions, setFilterTransactions] = useState([]);
@@ -48,6 +49,11 @@ const AllTransactionsPage = () => {
       },
     ],
   });
+
+  const deleteTransactionHandler = (id) => {
+    deleteHandler(id);
+    history.push('/');
+  };
 
   const filteredTransactions = (status) => {
     switch (status) {
@@ -77,8 +83,8 @@ const AllTransactionsPage = () => {
   };
 
   return (
-    <section className={'Transactions'}>
-      <div className="transaction_header">
+    <section className="w-full flex flex-col mt-8">
+      <div className="flex items-center justify-between">
         <div>
           <h3 style={{ letterSpacing: 2, fontSize: 18 }}>Transactions</h3>
         </div>
@@ -92,17 +98,19 @@ const AllTransactionsPage = () => {
         </div>
       </div>
       {FilterTransactions.length === 0 ? (
-        <p className="addTransaction">Add Some Transaction</p>
+        <p className="text-base mt-4 text-center">Add Some Transaction</p>
       ) : (
-        FilterTransactions.map((transaction) => {
-          return (
-            <Transaction
-              key={transaction.id}
-              transaction={transaction}
-              onDelete={() => deleteHandler(transaction.id)}
-            />
-          );
-        })
+        <div className="my-4 h-48 overflow-auto px-2">
+          {FilterTransactions.map((transaction) => {
+            return (
+              <Transaction
+                key={transaction.id}
+                transaction={transaction}
+                onDelete={() => deleteTransactionHandler(transaction.id)}
+              />
+            );
+          })}
+        </div>
       )}
       <div>
         <Doughnut data={chartData} />
