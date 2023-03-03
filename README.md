@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+<p align="center">
+  <a href="https://reactjs.org/" target="blank"><img src="https://www.datocms-assets.com/14946/1638186862-reactjs.png" width="320" alt="ReactJS Logo" /></a>
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  <h1 align="center"> 
+      Transaction App - React.js
+  </h1>
+  
+https://user-images.githubusercontent.com/72548955/222735779-c7903ceb-a452-4070-8560-d42aef740ffd.mp4
+  
+  ## ⚗️technologies
+- <img alt="html"  src="https://skillicons.dev/icons?i=html" width="20" height="20" align="center" /> HTML
+- <img alt="js"  src="https://skillicons.dev/icons?i=js" width="20" height="20" align="center" /> Java Scripts
+- <img alt="react"  src="https://skillicons.dev/icons?i=react" width="20" height="20" align="center" /> [React.js](https://reactjs.org/)
+- <img alt="Context API"  src="https://skillicons.dev/icons?i=react" width="20" height="20" align="center" /> Context API
+- <img alt="tailwind"  src="https://skillicons.dev/icons?i=tailwind" width="20" height="20" align="center" /> [Tailwind Css](https://tailwindcss.com/)
 
-## Available Scripts
 
-In the project directory, you can run:
+## 🚀 Demo
 
-### `npm start`
+Visit on netlify : [Project Link](https://transactionapp-alimokhtari79.netlify.app)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Installation Steps
 
-### `npm test`
+1. Clone the repository
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+git clone https://github.com/alimokhtari79/spa-transactionapp.git
+```
 
-### `npm run build`
+2. Change the working directory
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+cd spa-transactionapp
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Install dependencies
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+npm install
+```
 
-### `npm run eject`
+## ⚙️Running the app
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+$ npm start
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+🌟 You are all set!
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 📮 Contact with me
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[<img src='https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white' alt='gmail' height='30'>](alimokhtari910@yahoo.com)
+[<img src='https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white' alt='linkedin' height='30'>](https://www.linkedin.com/in/alimokhtari79/)
