@@ -40,6 +40,7 @@ const AllTransactionsPage = ({ history }) => {
   const transactions = useTransaction();
   const { deleteHandler } = useTransactionActions();
   const [FilterTransactions, setFilterTransactions] = useState([]);
+  const [searchTransaction, setSearchTransaction] = useState(transactions);
   const [selectedOptions, setSelectedOptions] = useState('All');
   const [chartData, setChartData] = useState({
     labels: transactions.map((data) => data.desc),
@@ -55,6 +56,21 @@ const AllTransactionsPage = ({ history }) => {
   const deleteTransactionHandler = (id) => {
     deleteHandler(id);
     history.push('/');
+  };
+
+  const handelSearch = (e) => {
+    const searchValue = e.target.value;
+
+    if (searchValue === '') {
+      setFilterTransactions(transactions);
+    } else {
+      const filtered = searchTransaction.filter((entry) =>
+        Object.values(entry).some(
+          (val) => typeof val === 'string' && val.includes(searchValue)
+        )
+      );
+      setFilterTransactions(filtered);
+    }
   };
 
   const filteredTransactions = (status) => {
@@ -106,6 +122,14 @@ const AllTransactionsPage = ({ history }) => {
             options={options}
           />
         </div>
+      </div>
+      <div>
+        <input
+          type="text"
+          className="mt-4 border-b border-b-gray-500 focus:border-b-white transition ease-in-out delay-300 bg-transparent p-1"
+          placeholder="Search"
+          onChange={handelSearch}
+        />
       </div>
       {FilterTransactions.length === 0 ? (
         <p className="text-base mt-4 text-center">Add Some Transaction</p>
